@@ -8,7 +8,7 @@ function getPasswordLength() {
    var lengthOfPassword = prompt("Please type in the length (must be from 8 to 128 characters) of your password.");
    while (lengthOfPassword < 8 || lengthOfPassword > 128 || lengthOfPassword == null) {
       // If entry is invalid, use prompt again to re-define length variable
-      alert("You did not choose a valid length. Try it again, this time with some gusto!")
+      alert("You did not choose a valid length. Please try again")
       lengthOfPassword = prompt("Please type in the length (must be from 8 to 128 characters) of your password.");
    }
    // Return length to function call variable

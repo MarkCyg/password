@@ -66,3 +66,30 @@ function initializePassword() {
    // Return 
    return characterRange;
 };
+
+// Password
+
+function generatePassword() {
+
+  
+   var userLength = getPasswordLength();
+   var characters = initializePassword();
+   
+   var yourPassword = '';  
+   for (let i = 0; i < userLength; i++) {
+      yourPassword += characters.charAt(Math.floor(Math.random() * characters.length));
+   }
+   return yourPassword;
+};
+
+var generateBtn = document.querySelector("#generate");
+
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+
+// Add event listener
+generateBtn.addEventListener("click", writePassword);

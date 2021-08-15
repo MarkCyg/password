@@ -79,30 +79,23 @@ function initializePassword() {
    return characterRange;
 };
 
-// * MAIN FUNCTION FOR PASSWORD GENERATION
+// Password
 
 function generatePassword() {
 
-   // Call both above functions through usable variables to prime for password generation
+  
    var userLength = getPasswordLength();
    var characters = initializePassword();
-
-   // Initialize password string to be passed to password variable in the writePassword() function
-   var yourPassword = '';
-   // i will iterate n times, with n being the desired password length 
+   
+   var yourPassword = '';  
    for (let i = 0; i < userLength; i++) {
-      // Make the string random selections through the character set
       yourPassword += characters.charAt(Math.floor(Math.random() * characters.length));
    }
-   // Return the password to the writePassword function
    return yourPassword;
 };
 
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -110,5 +103,5 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Add event listener to generate button
+// Add event listener
 generateBtn.addEventListener("click", writePassword);

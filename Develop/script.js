@@ -40,4 +40,29 @@ function initializePassword() {
    if (allPromptsFalseCheck) {
       alert("Please Select Character Types")
       initializePassword();   
+   };
+
+   // Shit for prompts
+   const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+   const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   const numeric = '0123456789';
+   const specialChars = `!"#$%&'()*+,-./:;<>=?@[]^_\\{}|~`;
+
+   var characterRange = '';
+
+   if (hasLowercase) { 
+      characterRange += lowerCase; 
    }
+   if (hasUppercase) { 
+      characterRange += upperCase; 
+   }
+   if (hasNumerics) { 
+      characterRange += numeric; 
+   }
+   if (hasSpecials) { 
+      characterRange += specialChars; 
+   }
+
+   // Return 
+   return characterRange;
+};

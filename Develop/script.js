@@ -1,5 +1,5 @@
 // Initial welcome prompt
-alert("Welcome to password Genie. Please Click the generate password button, and follow the promts.");
+alert("Welcome to password Genie. Please Click the Generate Password button, and follow the promts.");
 
 // Password length
 
@@ -21,7 +21,7 @@ function getPasswordLength() {
 function initializePassword() {
    
    // User Alert
-   alert("Confirm which character types!");
+   alert("Confirm which character types you need!");
 
    // LC
    var hasLowercase = confirm("Lower Case?");

@@ -13,7 +13,6 @@ function getPasswordLength() {
    }
    // Return length to function call variable
    return lengthOfPassword;
-
 };
 
 // Password build
